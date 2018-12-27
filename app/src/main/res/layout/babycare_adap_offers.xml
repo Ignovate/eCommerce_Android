@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".activity.home.HomeActivity">
+    <RelativeLayout
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_baby_offers"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp" />
+
+        <TextView
+            android:id="@+id/tv_baby_offers_desc"
+            android:layout_below="@+id/iv_baby_offers"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"
+            android:hint="Sebamed Baby Cleansing Bar(100g)"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:maxEms="15"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_baby_offers_price"
+            android:layout_below="@+id/tv_baby_offers_desc"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/blue"
+            android:hint="AED 4.30"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="4"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_centerHorizontal="true"
+            android:background="@color/view_price_dt"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@+id/tv_baby_offers_price"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="1dp">
+
+        </View>
+        <TextView
+            android:id="@+id/tv_baby_offers_price_dt"
+            android:layout_below="@+id/tv_baby_offers_price"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="AED 4.30"
+            android:textColor="@color/tv_price_dt"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="4"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

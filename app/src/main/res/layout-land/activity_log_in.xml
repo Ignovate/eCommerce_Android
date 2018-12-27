@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context=".activity.register.SignInActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/login_welcome_tv"
+            android:layout_marginLeft="10dp"
+            android:text="@string/log_tv_welcome"
+            android:textColor="@color/log_welcome"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/login_sign_con_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/login_welcome_tv"
+            android:text="@string/log_tv_sign_continue"
+            android:textColor="@color/log_sign_continue"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <android.support.v7.widget.CardView
+            android:id="@+id/login_card_email"
+            android:layout_below="@+id/login_sign_con_tv"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:shape="ring"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/login_email_iv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/email"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <EditText
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:layout_toRightOf="@+id/login_email_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/log_et_email_hint"/>
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/login_card_pass"
+            android:layout_below="@+id/login_card_email"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:visibility="visible"
+                    android:id="@+id/login_pass_iv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/password"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <EditText
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:layout_toRightOf="@+id/login_pass_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/log_et_pass_hint"/>
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:id="@+id/login_tv_forgot"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/login_card_pass"
+            android:text="@string/log_tv_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/login_tv_signup"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/login_card_pass"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/log_tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <Button
+            android:id="@+id/login_bt_submit"
+            android:text="@string/log_bt_submit"
+            android:textColor="@color/log_bt_submit"
+            android:layout_below="@+id/login_tv_signup"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/bt_corner_radius"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:background="@color/log_view_left"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/login_bt_submit"
+            android:layout_toLeftOf="@+id/login_tv_or"
+            android:layout_width="50dp"
+            android:layout_height="1dp">
+
+        </View>
+        <TextView
+            android:id="@+id/login_tv_or"
+            android:layout_below="@+id/login_bt_submit"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="@string/log_tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="@color/log_view_right"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/login_tv_or"
+            android:layout_below="@+id/login_bt_submit"
+            android:layout_width="50dp"
+            android:layout_height="1dp">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/login_google_signin_lay"
+            android:layout_below="@+id/login_tv_or"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/lay_google_sign_radius"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/login_google_iv"
+                android:background="@drawable/google"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/login_google_iv"
+                android:textColor="@color/log_bt_submit"
+                android:text="@string/log_tv_google_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_fb_lay"
+            android:layout_below="@+id/login_google_signin_lay"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/lay_fb_radius"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/login_fb_iv"
+                android:background="@drawable/fb"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/login_fb_iv"
+                android:textColor="@color/log_bt_submit"
+                android:text="@string/log_tv_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

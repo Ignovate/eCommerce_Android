@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" android:padding="10dp">
+    <!-- you can use any color you want I used here gray color-->
+    <corners android:radius="5dp"/>
+    <gradient
+        android:startColor="@color/log_bt_gradiant_left"
+        android:endColor="@color/log_bt_gradiant_right"
+         />
+</shape>

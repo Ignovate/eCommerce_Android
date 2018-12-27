@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyWishListActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/mywish_toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </include>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mywish_rv"
+        android:layout_above="@+id/mywishlist_bottom_lay"
+        android:layout_below="@+id/mywish_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/mywishlist_bottom_lay"
+        android:gravity="center"
+        android:background="@drawable/layout_shadow_top"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:layout_height="@dimen/_45sdp">
+            <RelativeLayout
+                android:id="@+id/lay_bot_1"
+                android:layout_centerInParent="true"
+                android:background="@drawable/lay_filter_flip_gradiant"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_centerInParent="true"
+                    android:text="CLEAR ALL"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

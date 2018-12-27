@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LayoutWidthHeightActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/lay_test"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/lay_bot_1"
+            android:background="@drawable/lay_filter_flip_gradiant"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_35sdp" >
+            <TextView
+                android:id="@+id/order_tv_1"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_centerInParent="true"
+                android:text="ADD TO CART"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lay_bot_2"
+            android:layout_toRightOf="@+id/lay_bot_1"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/lay_filter_flip_gradiant"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/order_tv_2"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="BUY NOW"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

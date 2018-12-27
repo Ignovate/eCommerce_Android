@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/lotion_lay_price_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/lay_filter"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RadioGroup
+                        android:id="@+id/rg_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <RadioButton
+                        android:id="@+id/lotion_radio_price_l_h"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text=" Price - Low to High"
+                        android:buttonTint="@color/colorPrimary"/>
+                    <RadioButton
+                        android:id="@+id/lotion_radio_price_h_l"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Price - High to Low"
+                        android:checked="false"
+                        android:buttonTint="@color/colorPrimary"/>
+                    <RadioButton
+                        android:id="@+id/lotion_radio_sellers"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Best sellers"
+                        android:checked="false"
+                        android:buttonTint="@color/colorPrimary"/>
+                    <RadioButton
+                        android:id="@+id/lotion_radio_newest"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Newest First"
+                        android:checked="false"
+                        android:buttonTint="@color/colorPrimary"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="Price - Low to High"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_below="@+id/lotion_radio_price_l_h"
+                        android:text="Price - High to Low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_below="@+id/lotion_radio_price_h_l"
+                        android:text="Best sellers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/lotion_radio_newest"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_below="@+id/lotion_radio_sellers"
+                        android:text="Newest First"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <include
+                layout="@layout/bottom_filter_layout"
+                android:layout_below="@+id/lay_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

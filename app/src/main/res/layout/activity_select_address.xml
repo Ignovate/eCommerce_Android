@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectAddressActivity">
+
+    <include
+        android:id="@+id/s_address_toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/s_addr_lay_agree"
+        android:layout_below="@+id/s_address_toolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_address_select"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_address_select"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="@dimen/_1sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_addre_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tv_address_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/rb_addre_new"
+                    android:text="Add New Address"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_add_new_address"
+                    android:layout_toRightOf="@+id/rb_addre_new"
+                    android:layout_below="@+id/rb_addre_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_30sdp"
+                            >
+
+                            <android.support.design.widget.TextInputLayout
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:id="@+id/s_addr_tl_f_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_add_newaddre_name"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="First Name"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/s_addr_tl_f_ph"
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/s_addr_tl_f_name">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_add_newaddre_ph"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Phone Number"
+                                    android:inputType="number"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/s_addr_lay_addr"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@+id/s_addr_tl_f_ph"
+                                android:background="@drawable/layout_border">
+
+                                <EditText
+                                    android:id="@+id/et_addnew_addre_addre"
+                                    android:layout_width="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:fontFamily="@font/montserrat_light"
+                                    android:hint="Address" />
+
+                            </RelativeLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/s_addr_tl_f_street"
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/s_addr_lay_addr">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_addnew_str"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Street"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/s_addr_tl_f_city"
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/s_addr_tl_f_street">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_addnew_city"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="City/District/Town"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/lay_spinner_state"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@+id/s_addr_tl_f_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight=".28"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/dropdown_state_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center"
+                                    android:spinnerMode="dropdown" />
+
+                                <ImageView
+                                    android:id="@+id/iv_drop_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_expand_more_black_24dp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/lay_spinner_country"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@+id/lay_spinner_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight=".28"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/dropdown_country_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="left"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center"
+                                    android:spinnerMode="dropdown" />
+
+                                <ImageView
+                                    android:id="@+id/iv_drop_country"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_expand_more_black_24dp" />
+
+                            </RelativeLayout>
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/s_addr_tl_f_landmark"
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lay_spinner_country">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_addnew_land"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Landmark (Optional)"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/s_addr_tl_f_al_ph"
+                                app:hintTextAppearance="@style/customfontstyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/s_addr_tl_f_landmark">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/et_addnew_altername_ph"
+                                    app:hintTextAppearance="@style/customfontstyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Alternate Phone Number (Optional)"
+                                    android:textSize="14sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/s_addr_lay_agree"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_above="@+id/s_addr_lay_bot"
+        android:background="@color/s_addr_agree_bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/layout_inner_shadow_top"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/layout_inner_shadow_bot"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/s_addr_cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/s_addr_tv_agree"
+                android:fontFamily="@font/montserrat_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/s_addr_cb_agree" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/s_addr_lay_bot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/lay_addre_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/lay_filter_flip_gradiant">
+
+                <TextView
+                    android:id="@+id/order_tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="CANCEL"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_addre_savedelivery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/lay_filter_flip_gradiant">
+
+                <TextView
+                    android:id="@+id/order_tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="SAVE &amp; DELIVER HERE"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

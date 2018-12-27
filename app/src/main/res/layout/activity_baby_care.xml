@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.home.HomeActivity">
+
+    <include
+        android:id="@+id/custom_toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar">
+
+        <include
+            android:id="@+id/custom_shop_search"
+            layout="@layout/custom_shop_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/custom_shop_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/babycare_carosal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/babycare_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_alignParentTop="true" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_48sdp"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/babycare_lay_offers"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@+id/babycare_carosal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/babycare_tv_offers"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/babycare_offers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/babycare_rv_offers"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_below="@+id/babycare_tv_offers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/babycare_lay_products"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@+id/babycare_lay_offers"
+                    android:background="@color/babycare_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/babycare_tv_products"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/babycare_products"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/babycare_rv_products"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_below="@+id/babycare_tv_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/babycare_category"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:background="@color/babycare_category"
+                    android:layout_below="@+id/babycare_lay_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp">
+
+                    <TextView
+                        android:id="@+id/babycare_tv_category"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/babycare_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.CardView
+                        android:layout_below="@+id/babycare_tv_category"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/babycare_rv_category"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

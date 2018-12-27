@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">PDC</string>
+    <!--common-->
+    <string name="common_shop">Shop By</string>
+    <string name="common_shop_category">Category</string>
+    <!--LogIn-->
+    <string name="log_tv_welcome">Welcome,</string>
+    <string name="log_tv_sign_continue">sign in to continue</string>
+    <string name="log_et_email_hint">Enter your email</string>
+    <string name="log_et_pass_hint">Password</string>
+    <string name="log_tv_forgot">Forgot Password</string>
+    <string name="log_tv_signup">Sign up</string>
+    <string name="log_bt_submit">SUBMIT</string>
+    <string name="log_tv_or">OR</string>
+    <string name="log_tv_google_sign">Sign in with Google</string>
+    <string name="log_tv_fb">Sign in with Facebook</string>
+    <!--home-->
+    <string name="home_shop">Shop By</string>
+    <string name="home_shop_category">Category</string>
+    <string name="home_exclusive">Our Exclusives</string>
+    <string name="home_offers">Offers</string>
+    <string name="home_trending">Trending Brands</string>
+    <!--signup-->
+    <string name="signup_create">Create</string>
+    <string name="signup_new_acc">New Account</string>
+    <string name="signup_et_name_hint">Your Name</string>
+    <string name="signup_et_email_hint">Email</string>
+    <string name="signup_et_pass_hint">Password</string>
+    <string name="signup_et_repass_hint">Re-enter Password</string>
+    <string name="signup_bt_submit">Submit</string>
+    <string name="signup_or">OR</string>
+    <string name="signup_bt_google_sign">Sign in with Google</string>
+    <string name="signup_bt_fb">Sign in with Facebook</string>
+    <string name="signup_tv_pass_desc">Password atleast 6 characters</string>
+    <string name="signup_tv_already_acc">Already have an account?</string>
+    <string name="signup_tv_signin">Sign in</string>
+
+    <!--signup_validation-->
+    <string name="err_valid_name">Name cannot be empty</string>
+    <string name="err_valid_email">Email cannot be empty</string>
+    <string name="err_valid_pass">Password cannot be empty</string>
+    <string name="err_valid_repass">RePassword cannot be empty</string>
+    <string name="err_valid_email_pattern">Email not valid</string>
+    <string name="err_valid_pass_pattern">mismatch password</string>
+
+
+    <!--baby care-->
+    <string name="babycare_shop">Shop By</string>
+    <string name="babycare_shop_category">Category</string>
+    <string name="babycare_offers">Amazing Offers Just for You</string>
+    <string name="babycare_products">Best Selling Products</string>
+    <string name="babycare_category">Try Something More in Category</string>
+
+    <string name="babycare_toolbar_title">Baby Care</string>
+    <string name="babycare_desc_1">Johnson&amp;s Top-to-Toe Baby Wash(500ml) </string>
+    <string name="babycare_desc_2">Sebamed Baby Cleansing Bar(100g) </string>
+    <string name="babycare_desc_3">Biotic Apple Blosson Princess Shampoo(200ml)</string>
+    <string name="babycare_desc_4">Mamaearth Gentle Cleansing Baby Shampoo</string>
+    <string name="babycare_price_1">AED 3.00</string>
+    <string name="babycare_price_2">AED 2.04</string>
+    <string name="babycare_price_3">AED 2.60</string>
+    <string name="babycare_price_4">AED 3.08</string>
+    <string name="babycare_price_dt1">AED 5.40</string>
+    <string name="babycare_price_dt2">AED 4.64</string>
+    <string name="babycare_price_dt3">AED 5.04</string>
+    <string name="babycare_price_dt4">AED 4.07</string>
+
+    <!--lotions & Oils-->
+    <string name="lotion_desc_1">AED 4.07</string>
+    <string name="title_activity_lotion_oils">LotionOilsActivity</string>
+    <string name="lotion_filter_price">Price</string>
+    <string name="lotion_filter_brand">Brand</string>
+    <string name="lotion_filter_sort">Sort</string>
+
+    <!--filter-->
+    <string name="filter_prodcut_desc">The sports nutrition industry\'s best-selling Whey protein powder represents the gold standard of protein quality.
+        Made in GMP complaint company owned and operated facilities in the U.S.A., Gold standard 100% Whey uses pure Whey Protein Isolates as the primary incredient.
+        Combined with ultra filtered Whey protein concentrate,each serving provides 24 grams of naturally occuring Branched Chain Amino Acids(BCAAs) which are prized by athletes </string>
+    <string name="filter_prodcut_usage">Use morning and/or evening on a daily basis.Use as per the requirement. </string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--product_full_view-->
+    <string name="product_max_count">Maximum 5 count</string>
+    <string name="no_response">Something went wrong,Please try again</string>
+
+    <!--signin-->
+    <string name="empty_all">Field cannot be empty</string>
+
+    <!--myorders-->
+    <string name="subtotal">Sub Total: AED &#160;</string>
+    <string name="grandtotal">Grand Total: AED&#160; </string>
+    <string name="priceAED">AED &#160;</string>
+</resources>

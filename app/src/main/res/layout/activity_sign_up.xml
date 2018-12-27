@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.register.SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/app_bg">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <TextView
+            android:id="@+id/signup_create_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/signup_create"
+            android:textColor="@color/log_welcome"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/signup_newacc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_create_tv"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/signup_new_acc"
+            android:textColor="@color/log_sign_continue"
+            android:textSize="@dimen/_16sdp" />
+
+        <RelativeLayout
+            android:id="@+id/signup_card_name"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/signup_newacc_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/layout_shadow">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/signup_name_iv"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/user" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/et_signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/signup_et_name_hint"
+                    android:lines="1"
+
+                    android:textSize="@dimen/_12sdp" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signup_card_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/signup_card_name">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:background="@drawable/layout_shadow">
+
+                <ImageView
+                    android:id="@+id/signup_email_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/email"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/et_signup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:inputType="textEmailAddress"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/signup_et_email_hint"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible" />
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signup_card_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/signup_card_email">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:background="@drawable/layout_shadow">
+
+                <ImageView
+                    android:id="@+id/signup_pass_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/password"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_signup_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/et_signup_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:inputType="textPassword"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/signup_et_pass_hint"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/signup_pass_desc_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_card_pass"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/signup_info_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/signup_info_iv"
+                android:fontFamily="@font/montserrat_light"
+                android:text="@string/signup_tv_pass_desc"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signup_card_repass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/signup_pass_desc_lay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/layout_shadow">
+
+                <ImageView
+                    android:id="@+id/signup_repass_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/password"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_signup_repass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/et_signup_repass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:inputType="textPassword"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/signup_et_repass_hint"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_signup_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/signup_card_repass"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bt_corner_radius"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/signup_bt_submit"
+            android:textColor="@color/log_bt_submit" />
+
+        <View
+            android:id="@+id/signup_view_left"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_signup_submit"
+            android:layout_marginLeft="@dimen/_45sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:background="@color/log_view_left">
+
+        </View>
+
+        <TextView
+            android:id="@+id/signup_tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signup_submit"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/signup_view_left"
+            android:text="@string/log_tv_or" />
+
+        <View
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_signup_submit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_toRightOf="@+id/signup_tv_or"
+            android:background="@color/log_view_right">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/login_google_signin_lay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/signup_tv_or"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lay_google_sign_radius"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/login_google_iv"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/google" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/login_google_iv"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/log_tv_google_sign"
+                android:textColor="@color/log_bt_submit"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fb_lay_signup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/login_google_signin_lay"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lay_fb_radius">
+
+            <ImageView
+                android:id="@+id/login_fb_iv"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/fb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/login_fb_iv"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/log_tv_fb"
+                android:textColor="@color/log_bt_submit"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+
+        android:id="@+id/signup_tv_already_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="70dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/signup_tv_already_acc"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tv_signup_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_toRightOf="@+id/signup_tv_already_acc"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/signup_tv_signin"
+        android:textColor="@color/log_bt_google_sign"
+        android:textSize="@dimen/_12sdp" />
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.orders.MyOrdersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/myorder_lay"
+            android:layout_alignParentRight="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/myorder_iv"
+                android:layout_marginTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/myorder_tv_title"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/myorder_lay"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/montserrat_light"
+            android:text="@string/babycare_desc_1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/myorder_tv_unit"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/myorder_tv_title"
+            android:hint="Unit: 500 ml"
+            android:fontFamily="@font/montserrat_light"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/myorder_tv_price"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/myorder_tv_unit"
+            android:textColor="@color/blue"
+
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/myorder_tv_price_dt"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/myorder_tv_price"
+            android:layout_below="@+id/myorder_tv_unit"
+            android:hint="@string/babycare_price_dt1"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/tv_price_dt"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/myorder_tv_price"
+            android:layout_below="@+id/myorder_tv_unit"
+            android:background="@color/view_price_dt"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="1dp">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/lay_filter_product_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myorder_tv_price"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:id="@+id/myorder_tv_gTotal"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                />
+            <View
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/myorder_tv_gTotal"
+                android:background="@color/black"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_15sdp">
+
+            </View>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myorder_tv_price"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/lay_filter_product_add"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/blue"
+            android:text="Invoice"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

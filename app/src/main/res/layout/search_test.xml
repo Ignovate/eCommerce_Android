@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_2sdp"
+    tools:context=".activity.home.HomeActivity">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/card_adap_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/sub_cate_lay"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sub_cate_iv"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sub_cate_tv_title"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toLeftOf="@+id/sub_cate_lay"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="@string/babycare_desc_1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/sub_cate_tv_unit"
+                    android:layout_below="@+id/sub_cate_tv_title"
+                    android:text="Unit: 500 ml"
+                    android:fontFamily="@font/montserrat_light"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sub_cate_tv_price"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@+id/sub_cate_tv_unit"
+                    android:textColor="@color/blue"
+                    android:text="@string/babycare_price_1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+                    <TextView
+                        android:layout_below="@+id/sub_cate_tv_unit"
+                        android:layout_toRightOf="@+id/sub_cate_tv_price"
+                        android:id="@+id/sub_cate_tv_price_dt"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="@string/babycare_price_dt1"
+                        android:textColor="@color/tv_price_dt"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_filter_product_add"
+                    android:layout_width="@dimen/_60sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sub_cate_tv_price"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/layout_shadow_filter_stock">
+
+                    <TextView
+                        android:id="@+id/filter_stock_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - " />
+
+                    <TextView
+                        android:id="@+id/filter_stock_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/filter_stock_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=" + " />
+                </RelativeLayout>
+
+                <TextView
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sub_cate_tv_price"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/lay_filter_product_add"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="REMOVE"
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+        <RelativeLayout
+            android:id="@+id/signup_card_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_below="@+id/signup_card_email"
+            android:background="@drawable/layout_shadow"
+
+            >
+
+            <ImageView
+                android:id="@+id/signup_pass_iv"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/password"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_signup_pass"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/layout_shadow">
+
+             </RelativeLayout>-->
+
+            <EditText
+                android:id="@+id/et_signup_pass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:hint="@string/signup_et_pass_hint"
+                android:text="ddxgxfgvxcvxcxzczxczxczczxcxxxxxxxxxxxxxxxxxx"
+                android:lines="1"
+                android:maxLines="1"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

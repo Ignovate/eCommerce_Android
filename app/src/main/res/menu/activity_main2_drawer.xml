@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_order"
+
+            android:title="View my Orders" />
+        <item
+            android:id="@+id/nav_my_addre"
+
+            android:title="My Addressess" />
+        <item
+            android:id="@+id/nav_mywishlist"
+
+            android:title="My WishList" />
+        <item
+            android:id="@+id/nav_logout"
+
+            android:title="Logout" />
+
+    </group>
+
+
+
+</menu>

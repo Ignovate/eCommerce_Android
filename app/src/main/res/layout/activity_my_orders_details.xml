@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.orders.MyOrdersDetailsActivity">
+
+    <include
+        android:id="@+id/my_details_toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <ScrollView
+        android:layout_below="@+id/my_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/myorder_details_cv_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/myorders_lay_orderid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/myorder_details_details_lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_light"
+                                android:text="Order Placed"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/myorder_details_order_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:hint=""
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_light"
+                                android:text="Order Id"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/myorder_details_orderId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:hint=""
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/lay_filter_flip_gradiant">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/montserrat_light"
+                                    android:padding="@dimen/_2sdp"
+                                    android:text="Delivered"
+                                    android:textColor="@color/white" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/myorder_details_tv_deli_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:hint=""
+                                android:textColor="@color/black" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/myorder_details_cv_ship_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myorder_details_cv_order"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/myorder_details_tv_s_addr_tit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="SHIPPING ADDRESS" />
+
+                    <View
+                        android:id="@+id/myorder_details_view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/myorder_details_tv_s_addr_tit"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/view_underline">
+
+                    </View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myorder_details_view_line"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_15sdp">
+
+
+                        <TextView
+                            android:id="@+id/tv_sale_address_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Name"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_sale_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_sale_address_name"
+                            android:layout_marginTop="@dimen/_5sdp"
+
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="17 North Jennings Road" />
+
+                        <TextView
+                            android:id="@+id/tv_sale_address_pin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_sale_address"
+                            android:layout_marginTop="@dimen/_5sdp"
+
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="12345678" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/myorder_details_cv_price_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myorder_details_cv_ship_address"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="0dp"
+                app:elevation="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/myorder_details_price_tv_titile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_light"
+                        android:text="PRICE DETAILS" />
+
+                    <View
+                        android:id="@+id/myorder_details_price_view"
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:layout_below="@+id/myorder_details_price_tv_titile"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/view_underline1">
+
+                    </View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myorder_details_price_view"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp">
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_subtot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Sub Total(4 items)" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_tax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myorder_details_price_tv_subtot"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Tax" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_shipping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myorder_details_price_tv_tax"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Shipping" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/myorder_details_price_tv_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myorder_details_price_tv_shipping"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Total" />
+
+                        <View
+                            android:id="@+id/myorder_details_price_dash_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/myorder_details_price_tv_total"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/dashed_line">
+
+                        </View>
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_gTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myorder_details_price_dash_view"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="Grand Total" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_sub_tot_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="AED 10.72"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_tax_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/myorder_details_price_tv_sub_tot_price"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="AED 00.00"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_shipping_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/myorder_details_price_tv_tax_price"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="AED 0.0"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/myorder_details_price_tv_tot_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/myorder_details_price_tv_shipping_price"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="AED 10.72"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/myorder_details_price_tv_gtot_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/myorder_details_price_dash_view"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="AED 10.72"
+                            android:textColor="@color/blue" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/myorder_details_cv_invoice"
+                android:layout_below="@+id/myorder_details_cv_price_details"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/myorder_details_iv_invoice"
+                        android:background="@drawable/invoice"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp" />
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Email Invoice"
+                        android:layout_toRightOf="@+id/myorder_details_iv_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:background="@drawable/right_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/myorder_details_rv"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/myorder_details_cv_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

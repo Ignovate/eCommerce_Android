@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_gradiant">
+
+        <ImageView
+            android:id="@+id/toolbar_menu"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_toRightOf="@+id/toolbar_menu"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_tv_title"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/toolbar_back"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/babycare_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/home_search_view"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/toolbar_back"
+            android:layout_toLeftOf="@+id/toolbar_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:imeOptions="actionSearch"
+            android:layoutDirection="rtl"
+            app:searchIcon="@drawable/ic_search_white_32dp">
+
+        </android.support.v7.widget.SearchView>
+
+        <ImageView
+            android:id="@+id/toolbar_cart"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/cart" />
+        <RelativeLayout
+            android:id="@+id/toolbar_lay_cart"
+            android:visibility="gone"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/toolbar_cart_no_tv"
+                android:layout_centerInParent="true"
+
+                android:maxEms="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

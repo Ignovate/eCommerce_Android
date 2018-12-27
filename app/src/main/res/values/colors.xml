@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="blue">#4285F4</color>
+    <color name="tv_price_dt">#FFCECEDE</color>
+    <color name="view_price_dt">#FFCECEDE</color>
+    <color name="green">#FF1DA13B</color>
+    <color name="view_underline">#FFCECEDE</color>
+    <color name="view_underline1">#87cecede</color>
+    <color name="view_transparent">#6bbcbcc2</color>
+    <!--home offers-->
+
+    <color name="home_card_offers_1">#FFFFEEDF</color>
+    <color name="home_card_offers_2">#FFDDFFCF</color>
+    <!--logIn-->
+    <color name="log_welcome">#000</color>
+    <color name="log_sign_continue">#FFCECEDE</color>
+    <color name="log_bt_gradiant_left">#63DA8F</color>
+    <color name="log_bt_gradiant_center">#FF34EE97</color>
+    <color name="log_bt_gradiant_right">#0FCDCD</color>
+    <color name="log_bt_submit">#FFFFFF</color>
+    <color name="log_view_left">#d2d0d0</color>
+    <color name="log_view_right">#d2d0d0</color>
+    <color name="log_bt_google_sign">#4285F4</color>
+    <color name="log_bt_fb">#4867AA</color>
+
+    <!--home_trending-->
+    <color name="home_lay_trending">#FF02E4BB</color>
+    <!--babycare_slide-->
+    <color name="babycare_products">#FFF8E7D5</color>
+
+    <color name="babycare_category">#FFFF8EF2</color>
+    <!--lotion-->
+    <color name="sub_filter_list_bg">#d2d0d0</color>
+    <!--progressbar-->
+    <color name="custom_progressbar">#4285F4</color>
+    <!--select addre-->
+    <color name="s_addr_agree_bg">#FFF2F1F7</color>
+    <color name="s_addr_lay_border_bg">#d2d0d0</color>
+    <!--myacc-->
+    <color name="user_bg_gradiant_left">#FFF7026B</color>
+    <color name="user_bg_gradiant_right">#FFF94E5B</color>
+</resources>

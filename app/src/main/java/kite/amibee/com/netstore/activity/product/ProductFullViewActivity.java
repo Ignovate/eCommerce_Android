@@ -113,7 +113,7 @@ public class ProductFullViewActivity extends AppCompatActivity {
         toolbar_tv_title.setVisibility(View.GONE);
 
 
-//
+///
         order_tv_1 = (TextView) findViewById(R.id.order_tv_1);
         order_tv_2 = (TextView) findViewById(R.id.order_tv_2);
 //        order_tv_1.setText("");

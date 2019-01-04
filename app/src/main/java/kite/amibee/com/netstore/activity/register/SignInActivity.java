@@ -21,6 +21,7 @@ import java.util.List;
 
 import javax.security.auth.login.LoginException;
 
+import kite.amibee.com.netstore.activity.register.Forgot_password;
 import kite.amibee.com.netstore.PaymentActivity;
 import kite.amibee.com.netstore.SelectAddressActivity;
 import kite.amibee.com.netstore.activity.home.HomeActivity;
@@ -36,7 +37,7 @@ import kite.amibee.com.netstore.util.api.Api;
 public class SignInActivity extends AppCompatActivity {
     private static final String TAG = "SignInActivity";
     Button login_bt_submit;
-    TextView login_tv_signup;
+    TextView login_tv_signup,login_tv_forgot;
     EditText et_signin_email, et_signin_pass;
     TextInputLayout ti_signin_email,ti_signin_pass;
     private View.OnClickListener onClickListener;
@@ -70,12 +71,14 @@ public class SignInActivity extends AppCompatActivity {
         onClick();
         login_bt_submit = (Button) findViewById(R.id.login_bt_submit);
         login_tv_signup = (TextView) findViewById(R.id.login_tv_signup);
+        login_tv_forgot = (TextView) findViewById(R.id.login_tv_forgot);
         et_signin_email = findViewById(R.id.et_signin_email);
         et_signin_pass = findViewById(R.id.et_signin_pass);
         ti_signin_email=findViewById(R.id.ti_signin_email);
         ti_signin_pass=findViewById(R.id.ti_signin_pass);
 
         login_tv_signup.setOnClickListener(onClickListener);
+        login_tv_forgot.setOnClickListener(onClickListener);
         login_bt_submit.setOnClickListener(onClickListener);
         et_signin_email.setOnClickListener(onClickListener);
         et_signin_pass.setOnClickListener(onClickListener);
@@ -94,14 +97,14 @@ public class SignInActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(s) && msg==null ) {
 
 
-             if(et_signin_email.getText().hashCode()==s.hashCode()){
+            if(et_signin_email.getText().hashCode()==s.hashCode()){
                 ti_signin_email.setError(null);
             }else if (et_signin_pass.getText().hashCode()==s.hashCode()){
                 ti_signin_pass.setError(null);
             }
 
         }else if (TextUtils.isEmpty(s) && msg!=null){
-            Log.d(TAG, "validationEnable: else if 1 " );
+            Log.e(TAG, "validationEnable: else if 1 " );
             if(et_signin_email.getText().hashCode()==s.hashCode()){
                 ti_signin_email.setError(msg);
             }else if (et_signin_pass.getText().hashCode()==s.hashCode()){
@@ -109,7 +112,7 @@ public class SignInActivity extends AppCompatActivity {
             }
         }
         else{
-            Log.d(TAG, "validationEnable: else " );
+            Log.e(TAG, "validationEnable: else " );
             if(et_signin_email.getText().hashCode()==s.hashCode()){
                 ti_signin_email.setError(msg);
             }else if (et_signin_pass.getText().hashCode()==s.hashCode()){
@@ -155,7 +158,7 @@ public class SignInActivity extends AppCompatActivity {
             public void afterTextChanged(Editable edit) {
                 editable=edit;
                 if (edit.length()==0){
-                     if(et_signin_email.getText().hashCode()==edit.hashCode()){
+                    if(et_signin_email.getText().hashCode()==edit.hashCode()){
                         validationEnable(edit,getResources().getString(R.string.err_valid_email));
                     }else if (et_signin_pass.getText().hashCode()==edit.hashCode()){
                         validationEnable(edit,getResources().getString(R.string.err_valid_pass));
@@ -174,12 +177,12 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (login_bt_submit.hashCode() == view.hashCode()) {
-                     s_email = et_signin_email.getText().toString();
-                     s_pass = et_signin_pass.getText().toString();
+                    s_email = et_signin_email.getText().toString();
+                    s_pass = et_signin_pass.getText().toString();
 
-                     if (s_email.isEmpty()){
-                         ti_signin_email.setError(getResources().getString(R.string.err_valid_email));
-                     }
+                    if (s_email.isEmpty()){
+                        ti_signin_email.setError(getResources().getString(R.string.err_valid_email));
+                    }
 
                     if (s_pass.isEmpty()){
                         ti_signin_pass.setError(getResources().getString(R.string.err_valid_pass));
@@ -200,6 +203,10 @@ public class SignInActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                     startActivity(intent);
                     finish();
+                }else if (login_tv_forgot.hashCode() == view.hashCode()) {
+                    Intent intent = new Intent(getApplicationContext(), Forgot_password.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         };
@@ -212,7 +219,6 @@ public class SignInActivity extends AppCompatActivity {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("email", email);
         jsonObject.addProperty("password", pass);
-        Log.w(TAG, "signIn: jsonObject "+jsonObject );
         api.signIn(jsonObject);
     }
 
@@ -233,33 +239,32 @@ public class SignInActivity extends AppCompatActivity {
                     mobile = Integer.parseInt(signInDetailsModel.getMobile());
                 }
 
-                Log.w(TAG, "apiResponse: signin userActive "+userActive );
-                Log.w(TAG, "apiResponse: signin cusId "+cusId );
-                Log.w(TAG, "apiResponse: signin quoteId "+quoteId );
-                Log.w(TAG, "apiResponse: signin userName "+userName );
-                Log.w(TAG, "apiResponse: signin email "+email );
-                Log.w(TAG, "apiResponse: signin mobile "+mobile );
-                if (quoteId==null){
-                    quoteId="0";
+                Log.e(TAG, "apiResponse: signin userActive "+userActive );
+                Log.e(TAG, "apiResponse: signin cusId "+cusId );
+                Log.e(TAG, "apiResponse: signin quoteId "+quoteId );
+                Log.e(TAG, "apiResponse: signin userName "+userName );
+                Log.e(TAG, "apiResponse: signin email "+email );
+                Log.e(TAG, "apiResponse: signin mobile "+mobile );
+                if (cusId==null){
+                    cusId="0";
                 }
-                try
-                {
-                    preferencesHelper.putUserRegister(Boolean.parseBoolean(userActive));
-                    preferencesHelper.setCusId(Integer.parseInt(cusId));
-                    preferencesHelper.setQuoteId(Integer.parseInt(quoteId));
-                    preferencesHelper.setUserName(userName);
-                    preferencesHelper.setEmail(email);
-                    preferencesHelper.setMobile(mobile);
-                    Log.d(TAG, "apiResponse: signin after cusId "+preferencesHelper.getCusId() );
+                preferencesHelper.putUserRegister(Boolean.parseBoolean(userActive));
+                preferencesHelper.setCusId(Integer.parseInt(cusId));
 
+//            preferencesHelper.setQuoteId(Integer.parseInt(quoteId));
+                preferencesHelper.setUserName(userName);
+                preferencesHelper.setEmail(email);
+                preferencesHelper.setMobile(mobile);
+                Log.d(TAG, "apiResponse: signin after cusId "+preferencesHelper.getCusId() );
+                //just temp ..after you should  delete
+//                preferencesHelper.setAddressId(34);
 
-                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                    startActivity(intent);
-                    finish();
-                }catch (Exception e){
-                    Log.e(TAG, "apiResponse: Exception "+e );
-                }
+            /*CusID=preferencesHelper.getCusId();
+            api.addressList(CusID);*/
 
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                finish();
             } else {
                 utils.showMessage(msg, SignInActivity.this);
             }
@@ -271,6 +276,33 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
+    /*public void apiResponseAdressList(AddressListModel apiDataAddreList){
+       List<AddressModel> addressList = apiDataAddreList.getAddressList();
+       if (addressList.size()< 0){
+           String name="Manikandan";
+           String street="Anna Nagar";
+           JsonObject jsonObject = new JsonObject();
+           jsonObject.addProperty("custId", CusID);
+           jsonObject.addProperty("firstname", name);
+           jsonObject.addProperty("streetname", street);
+           jsonObject.addProperty("countryId", 1);
+           jsonObject.addProperty("regionId", 1);
+           jsonObject.addProperty("areaId", 1);
+           jsonObject.addProperty("postcode", 1);
+           api.addressAdd(jsonObject);
+           Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+           startActivity(intent);
+           finish();
+       }
+
+    }
+    public void apiResponseAddAdress(AddressModel addressModel){
+        int addressId = Integer.parseInt(addressModel.getId());
+        preferencesHelper.setAddressId(addressId);
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }*/
 
 
 }

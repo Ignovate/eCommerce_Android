@@ -96,4 +96,21 @@
     <string name="subtotal">Sub Total: AED &#160;</string>
     <string name="grandtotal">Grand Total: AED&#160; </string>
     <string name="priceAED">AED &#160;</string>
+
+
+    <!--forgotpassword-->
+    <string name="forgot_password">Forgot Password,</string>
+    <string name="set_new_one">Set new one</string>
+
+    <!--validate_otp-->
+    <string name="provide_otp">Provide OTP</string>
+    <string name="onetime_authentication">Onetime Authentication</string>
+    <string name="otp">_   _   _   _</string>
+
+    <!--reset_password-->
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password">New Password</string>
+    <string name="reenter_password">Re enter Password</string>
+    <string name="reset_successful">Your Password has been reset successfully..!</string>
+
 </resources>

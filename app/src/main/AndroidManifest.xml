@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="kite.amibee.com.netstore.MyApp"
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,27 +23,16 @@
         <activity android:name=".activity.register.SignInActivity" />
         <activity
             android:name=".activity.home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.register.SignUpActivity" />
-
         <activity android:name=".BabyCareActivity" />
-        <activity android:name=".activity.product.ProductListActivity" >
-
-        </activity>
+        <activity android:name=".activity.product.ProductListActivity" />
         <activity android:name=".activity.product.ProductFullViewActivity" />
         <activity android:name=".BgCornerActivity" />
         <activity android:name=".activity.addToCart.MyCartActivity" />
-        <activity android:name=".activity.delivery.DeliveryActivity" >
-
-        </activity>
-        <activity android:name=".SelectAddressActivity" >
-
-        </activity>
-        <activity android:name=".activity.orders.MyOrdersActivity" >
-
-        </activity>
+        <activity android:name=".activity.delivery.DeliveryActivity" />
+        <activity android:name=".SelectAddressActivity" />
+        <activity android:name=".activity.orders.MyOrdersActivity" />
         <activity android:name=".activity.orders.MyOrdersDetailsActivity" />
         <activity android:name=".MyWishListActivity" />
         <activity android:name=".MyAccountActivity" />
@@ -55,6 +44,11 @@
         <activity android:name=".LayoutWidthHeightActivity" />
         <activity android:name=".MultiViewActivity" />
         <activity android:name=".PaymentActivity" />
+        <activity android:name=".activity.register.Forgot_password" />
+        <activity android:name=".activity.register.Validate_otp" />
+        <activity android:name=".activity.register.Resetpassword" />
+       <!-- <activity android:name=".activity.register.Passwordreset" />-->
+        <activity android:name=".activity.register.Passwordreset_splash"></activity>
     </application>
 
 </manifest>

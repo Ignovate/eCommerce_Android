@@ -24,12 +24,13 @@ import kite.amibee.com.netstore.util.PreferencesHelper;
 import kite.amibee.com.netstore.util.Utils;
 import kite.amibee.com.netstore.util.api.Api;
 
+import static kite.amibee.com.netstore.util.Pattern.PASSWORD_VALIDE;
+
 public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = "SignUpActivity";
     TextView tv_signup_signin;
     EditText et_signup_name, et_signup_email, et_signup_pass, et_signup_repass;
     TextInputLayout ti_signup_name, ti_signup_email, ti_signup_pass, ti_signup_repass;
-
     Button btn_signup_submit;
     View.OnClickListener onClickListener;
     View.OnFocusChangeListener onFocusChangeListener;
@@ -82,7 +83,6 @@ public class SignUpActivity extends AppCompatActivity {
 
         btn_signup_submit.setOnClickListener(onClickListener);
         tv_signup_signin.setOnClickListener(onClickListener);
-
     }
 
     public void validationEnable(Editable s, String msg) {
@@ -117,6 +117,12 @@ public class SignUpActivity extends AppCompatActivity {
                 ti_signup_email.setError(msg);
             } else if (et_signup_pass.getText().hashCode() == s.hashCode()) {
                 ti_signup_pass.setError(msg);
+
+                 //et_signup_repass.setError("");
+            }else if (et_signup_repass.getText().hashCode() == s.hashCode()) {
+                ti_signup_repass.setError(msg);
+
+               // et_signup_repass.setError("");
             }
         }
     }
@@ -153,6 +159,8 @@ public class SignUpActivity extends AppCompatActivity {
         onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
 
                 if (btn_signup_submit.hashCode() == view.hashCode()) {
                     s_name = et_signup_name.getText().toString();
@@ -200,7 +208,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 } else {
                                     Log.e(TAG, "onClick: MISMATCH");
-                                    validationEnable(et_signup_pass.getText(), getResources().getString(R.string.err_valid_pass_pattern));
+                                    validationEnable(et_signup_repass.getText(), getResources().getString(R.string.err_valid_pass_pattern));
 
                                 }
 
@@ -220,15 +228,44 @@ public class SignUpActivity extends AppCompatActivity {
                         ti_signup_repass.setError(getResources().getString(R.string.err_valid_repass));
 
                     }
-                }else if (tv_signup_signin.hashCode() == view.hashCode()) {
+                }
+                if (tv_signup_signin.hashCode() == view.hashCode()) {
                     Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
                     startActivity(intent);
+                    finish();
+                }
+                String pass = et_signup_pass.getText().toString();
+                if(TextUtils.isEmpty(pass) || pass.length() < 6)
+                {
+                    ti_signup_pass.setError("You must have 6 characters in your password");
+                    return;
                 }
 
 
+               /* else if (tv_signup_signin.hashCode() == view.hashCode()) {
+                    Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                    startActivity(intent);
+                    finish();
+                }*/
+
+
+
             }
+
         };
     }
+  /*  public void onClickListener(View v)
+    {
+        String pass = et_signup_pass.getText().toString();
+        if(TextUtils.isEmpty(pass) || pass.length() < 6)
+        {
+            et_signup_pass.setError("You must have 6 characters in your password");
+            return;
+        }
+
+        //continue processing
+
+    }*/
 
     public void textWatcher() {
         textWatcher = new TextWatcher() {

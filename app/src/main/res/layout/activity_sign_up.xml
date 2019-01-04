@@ -183,7 +183,9 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 app:hintAnimationEnabled="false"
                 app:hintEnabled="false"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+
+                >
 
                 <EditText
                     android:id="@+id/et_signup_pass"
@@ -193,7 +195,8 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/signup_et_pass_hint"
                     android:textSize="@dimen/_12sdp"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                   />
             </android.support.design.widget.TextInputLayout>
         </RelativeLayout>
 
@@ -206,22 +209,22 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp">
 
-            <ImageView
-                android:id="@+id/signup_info_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:background="@drawable/info" />
+            <!--  <ImageView
+                  android:id="@+id/signup_info_iv"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/_10sdp"
+                  android:background="@drawable/info" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_toRightOf="@+id/signup_info_iv"
-                android:fontFamily="@font/montserrat_light"
-                android:text="@string/signup_tv_pass_desc"
-                android:textSize="12sp" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/_5sdp"
+                  android:layout_marginTop="@dimen/_3sdp"
+                  android:layout_toRightOf="@+id/signup_info_iv"
+                  android:fontFamily="@font/montserrat_light"
+                  android:text="@string/signup_tv_pass_desc"
+                  android:textSize="12sp" />-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -258,7 +261,8 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 app:hintAnimationEnabled="false"
                 app:hintEnabled="false"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+               >
 
                 <EditText
                     android:id="@+id/et_signup_repass"
@@ -268,7 +272,8 @@
                     android:background="@android:color/transparent"
                     android:hint="@string/signup_et_repass_hint"
                     android:textSize="@dimen/_12sdp"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                   />
             </android.support.design.widget.TextInputLayout>
         </RelativeLayout>
 
@@ -288,10 +293,10 @@
 
         <View
             android:id="@+id/signup_view_left"
-            android:layout_width="@dimen/_50sdp"
+            android:layout_width="@dimen/_65sdp"
             android:layout_height="1dp"
             android:layout_below="@+id/btn_signup_submit"
-            android:layout_marginLeft="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
             android:layout_marginRight="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_19sdp"
             android:background="@color/log_view_left">

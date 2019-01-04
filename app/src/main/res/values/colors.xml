@@ -44,4 +44,9 @@
     <!--myacc-->
     <color name="user_bg_gradiant_left">#FFF7026B</color>
     <color name="user_bg_gradiant_right">#FFF94E5B</color>
+
+
+
+    <!--otp-->
+    <color name="graycolor">#DCDCDC</color>
 </resources>
